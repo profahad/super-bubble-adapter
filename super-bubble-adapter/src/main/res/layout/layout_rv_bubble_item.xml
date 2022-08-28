@@ -1,0 +1,74 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:id="@+id/rowTitle"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginStart="@dimen/marginTiny"-->
+<!--    android:layout_marginTop="@dimen/marginSmall"-->
+<!--    android:layout_marginEnd="@dimen/marginTiny"-->
+<!--    android:background="@drawable/ic_bubble_background"-->
+<!--    android:ellipsize="none"-->
+<!--    android:includeFontPadding="false"-->
+<!--    android:orientation="vertical"-->
+<!--    android:paddingStart="@dimen/marginSmall"-->
+<!--    android:paddingTop="@dimen/marginTiny"-->
+<!--    android:paddingEnd="@dimen/marginSmall"-->
+<!--    android:paddingBottom="@dimen/marginTiny"-->
+<!--    android:singleLine="true"-->
+<!--    android:textAlignment="center"-->
+<!--    android:textColor="@color/colorTextLight" />-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/ic_bubble_background">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="@dimen/marginMedium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewBubbleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bubble_font"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="6dp"
+        android:text="English"
+        android:textColor="@color/colorTextLight"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewCross"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_cross_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBubbleTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBubbleTitle"
+        app:layout_constraintTop_toTopOf="@+id/textViewBubbleTitle"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
